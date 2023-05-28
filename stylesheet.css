@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  justify-content: flex-start;
+  background: linear-gradient(
+    90deg,
+    rgba(252, 0, 0, 0.8) 5%,
+    rgba(255, 172, 172, 0.8) 70%
+  );
+}
+
+.start-button {
+  font-size: 15px;
+  height: 30px;
+  line-height: 10px;
+  margin-top: 20px;
+}
+
+header {
+  text-align: center;
+}
+
+.container {
+  width: 800px;
+  max-width: 80%;
+  background-color: gray;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+button {
+  background: radial-gradient(
+    circle,
+    rgba(163, 159, 159, 0.8) 5%,
+    rgba(59, 58, 58, 0.8) 70%
+  );
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 20px;
+  max-width: auto;
+  text-align: center;
+  transition-duration: 0.15s;
+  transition-property: background-color;
+  transition-timing-function: linear;
+  margin-top: 0.6em;
+}
+
+.btn-grid {
+  display: grid;
+  margin: 20px 0;
+}
+
+.hide {
+  display: none;
+}
+
+.large-font {
+  font-size: 4em;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+section {
+  flex: 0 auto;
+  padding: 8px;
+  margin-top: 50px;
+  background-color: gray;
+  border-radius: 8px;
+}
+
+.timer {
+  text-align: center;
+  height: auto;
+  background: white;
+}
+
+.score {
+  text-align: center;
+  height: auto;
+  background: white;
+}

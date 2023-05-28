@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Web Development Study Game</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+  </head>
+  <body>
+    <header>
+      <div class="large-font">Web Development Study Game</div>
+      <button class="start-button">Start</button>
+    </header>
+
+    <main>
+      <section>
+        <div class="container">
+          <div id="question-container" class="hide"></div>
+          <div id="question">Question</div>
+          <div id="answer-buttons" class="btn-grid">
+            <button class="btn">Answer 1</button>
+            <button class="btn">Answer 2</button>
+            <button class="btn">Answer 3</button>
+            <button class="btn">Answer 4</button>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="timer">20</div>
+        <h2>Time Left</h2>
+        <div class="score">0</div>
+        <h2>Score</h2>
+      </section>
+
+      <div class="container hide" id="inputScore">
+        <h1 class="h1 mb-4">Finished!</h1>
+        <p class="lead mb-4">Final Score: <span id="score"></span></p>
+        <p class="lead mb-4">
+          Enter initials: <input type="text" id="initials" />
+        </p>
+        <button
+          type="button"
+          class="btn btn-primary btn-lg"
+          id="submitInitials"
+        >
+          Submit
+        </button>
+      </div>
+
+      <div class="container hide" id="highScores">
+        <h1 class="h1 mb-4 font-weight-bold">Highscores</h1>
+        <div class="container h4 mb-4" id="scores"></div>
+        <button type="button" class="btn btn-primary btn-lg" id="goBack">
+          Go Back
+        </button>
+        <button type="button" class="btn btn-primary btn-lg" id="clearScores">
+          Clear Scores
+        </button>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
