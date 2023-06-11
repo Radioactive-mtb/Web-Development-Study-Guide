@@ -8,16 +8,16 @@
   </head>
   <body>
     <header>
-      <div class="large-font">Web Development Study Game</div>
-      <button class="start-button">Start</button>
+      <div class="largeFont">Web Development Study Game</div>
+      <button class="startButton">Start</button>
     </header>
 
     <main>
       <section>
         <div class="container">
-          <div id="question-container" class="hide"></div>
+          <div id="questionContainer" class="hide"></div>
           <div id="question">Question</div>
-          <div id="answer-buttons" class="btn-grid">
+          <div id="answerButtons" class="btnGrid">
             <button class="btn">Answer 1</button>
             <button class="btn">Answer 2</button>
             <button class="btn">Answer 3</button>
@@ -33,7 +33,7 @@
         <h2>Score</h2>
       </section>
 
-      <div class="container hide" id="inputScore">
+      <div class="hide" id="inputScore">
         <h1 class="h1 mb-4">Finished!</h1>
         <p class="lead mb-4">Final Score: <span id="score"></span></p>
         <p class="lead mb-4">
@@ -48,15 +48,9 @@
         </button>
       </div>
 
-      <div class="container hide" id="highScores">
+      <div class="hide" id="highScores">
         <h1 class="h1 mb-4 font-weight-bold">Highscores</h1>
-        <div class="container h4 mb-4" id="scores"></div>
-        <button type="button" class="btn btn-primary btn-lg" id="goBack">
-          Go Back
-        </button>
-        <button type="button" class="btn btn-primary btn-lg" id="clearScores">
-          Clear Scores
-        </button>
+        <div class="container h4 mb-4" id="showScores"></div>
       </div>
     </main>
     <script src="script.js"></script>

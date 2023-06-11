@@ -17,7 +17,7 @@ body {
   );
 }
 
-.start-button {
+.startButton {
   font-size: 15px;
   height: 30px;
   line-height: 10px;
@@ -55,7 +55,7 @@ button {
   margin-top: 0.6em;
 }
 
-.btn-grid {
+.btnGrid {
   display: grid;
   margin: 20px 0;
 }
@@ -64,7 +64,7 @@ button {
   display: none;
 }
 
-.large-font {
+.largeFont {
   font-size: 4em;
   text-align: center;
 }

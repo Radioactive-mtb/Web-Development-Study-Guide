@@ -1,10 +1,16 @@
-var startButton = document.querySelector(".start-button");
-var questionContainerEl = document.querySelector("#question-container");
+var startButton = document.querySelector(".startButton");
+var questionContainerEl = document.querySelector("#questionContainer");
 var score = 0;
 var questionEl = document.querySelector("#question");
-var answerBtnEl = document.querySelector("#answer-buttons");
+var answerBtnEl = document.querySelector("#answerButtons");
 var timerEl = document.querySelector(".timer");
 var scoreEl = document.querySelector(".score");
+var inputScoreEl = document.querySelector("#inputScore");
+var submitInitialsBtnEl = document.querySelector("#submitInitials");
+var initialsEl = document.querySelector("#initials");
+var userScoreEl = document.querySelector("#score");
+var highScoresEl = document.querySelector("#highScores");
+var showScoresEl = document.querySelector("#showScores");
 var timer;
 
 var shuffledQuestions, currentQuestion;
@@ -96,9 +102,47 @@ function startTimer() {
 }
 
 function gameOver() {
-  alert("Game Over");
-  reset();
+  //alert("Game Over");
+  clearInterval(timer);
+  userScoreEl.textContent = score;
+  inputScore();
 }
+
+function inputScore() {
+  questionContainerEl.setAttribute("class", "hide");
+  inputScoreEl.removeAttribute("class", "hide");
+}
+
+submitInitialsBtnEl.addEventListener("click", function () {
+  let initValue = initialsEl.value;
+  console.log(initValue);
+  if (initValue) {
+    let userScore = { username: initValue, userScore: score };
+    initialsEl.value = "";
+    highScores = JSON.parse(localStorage.getItem("scores")) || [];
+    highScores.push(userScore);
+    localStorage.setItem("scores", JSON.stringify(highScores));
+    inputScoreEl.setAttribute("class", "hide");
+    renderHighScores();
+  }
+
+  function renderHighScores() {
+    //scoresEl.innerHTML = "";
+    highScoresEl.removeAttribute("class", "hide");
+    highScores = JSON.parse(localStorage.getItem("scores"));
+    console.log(highScores);
+    for (let i = 0; i < highScores.length; i++) {
+      let scoreItem = document.createElement("div");
+      scoreItem.className += "row mb-3 p-2";
+      console.log(scoreItem);
+      scoreItem.setAttribute("style", "background-color:PaleTurquoise");
+      scoreItem.textContent = `${i + 1}. ${highScores[i].username} - ${
+        highScores[i].userScore
+      }`;
+      showScoresEl.appendChild(scoreItem);
+    }
+  }
+});
 
 var questions = [
   {
